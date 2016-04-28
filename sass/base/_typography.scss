@@ -1,0 +1,10 @@
+// -----------------------------------------------------------------------------
+// This file contains all typography declarations
+// -----------------------------------------------------------------------------
+
+
+// Basic typography style for body text
+body {
+  color: $brown;
+  font: normal 125% / 1.4 $text-font-stack;
+}

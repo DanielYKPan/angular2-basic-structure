@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Base font size
+/// @type Size
+$base-font-size: 1rem;
+
+/// Base line height
+/// @type Size
+$base-line-height: 1.25 * $base-font-size;
+
+/// Font type settings
+/// font-size: X * (4/3)
+/// line-height: X * 1.25 > font-size
+/// @type Map
+$type-settings: (
+        -1: (
+                font-size: .75rem,
+                line-height: $base-line-height,
+        ),
+        0: (
+                font-size: 1rem,
+                line-height: $base-line-height,
+        ),
+        1: (
+                font-size: 1.333rem,
+                line-height: $base-line-height * 2,
+        ),
+        2: (
+                font-size: 1.778rem,
+                line-height: $base-line-height * 2,
+        ),
+        3: (
+                font-size: 2.37rem,
+                line-height: $base-line-height * 2
+        ),
+        4: (
+                font-size: 3.16rem,
+                line-height: $base-line-height * 3
+        ),
+        5: (
+                font-size: 4.21rem,
+                line-height: $base-line-height * 4
+        )
+);
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #222 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #e50050 !default;
+
+/// Brown
+/// @type Color
+$brown: hsla(0, 4%, 31%, 1) !default;
+
+/// White
+/// @type Color
+$white: hsla(0, 100%, 100%, 1) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: hsla(0, 0%, 97%, 1) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: hsla(120, 4%, 95%, 1) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #444 !default;
+
+/// Container's maximum width
+/// Below that is 100%
+/// @type Length
+$max-width: 1200px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// @see {mixin} respond-to
+$breakpoints: (
+        'small': (min-width: 320px),
+        'medium': (min-width: 768px),
+        'large': (min-width: 1024px),
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/public/assets/';
+$base-url: '/public/assets/' !default;
+
+/// Z-Layers map
+/// @prop {String} keys - Keys are identifiers mapped to a given layer name
+/// @prop {Map} values - Values are actual z-index value
+/// @see {mixin} z
+$z-layers: (
+        bottomless-pit: -9999,
+        default: 1,
+        banner: 88,
+        super-search: 888,
+        misc-nav: 8888,
+        super-search-active: 88888,
+        overlay: 7777,
+        menu: 9999,
+        toppest: 99999999
+);

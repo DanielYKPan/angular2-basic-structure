@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+// Set up a decent box model on the root element
+html {
+  box-sizing: border-box;
+}
+
+// Make all elements from the DOM inherit from the parent box-sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+article,
+aside,
+footer,
+form,
+header,
+main,
+nav,
+pre,
+section {
+  position: relative;
+}
+
+// Basic styles for links
+a {
+  color: $brand-color;
+  cursor: pointer;
+  text-decoration: none;
+
+  @include on-event {
+    color: $text-color;
+  }
+}
+
+body {
+  background-color: $mid-grey;
+  -webkit-font-smoothing: antialiased;
+}
