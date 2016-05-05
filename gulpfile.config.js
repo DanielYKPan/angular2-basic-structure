@@ -11,8 +11,8 @@
       this.source = './';
       this.sourceApp = this.source + 'app/';
 
-      this.tsOutputPath = this.source + '/js';
-      this.allJavaScript = [this.source + '/js/**/*.js'];
+      this.tsOutputPath = this.source + '/dist';
+      this.allJavaScript = [this.source + '/dist/**/*.js'];
       this.allTypeScript = this.sourceApp + '/**/*.ts';
 
       this.scssOutputPath = this.source + '/public/assets/css';

@@ -8,3 +8,4 @@
 *.js.map
 !gulpfile.js
 !gulpfile.config.js
+!systemjs.config.js
